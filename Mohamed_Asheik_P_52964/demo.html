@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>software-ui-saas-eds - light header</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="demo.js"></script>
+    <script src="dist/index-all.js"></script>
+</head>
+
+<body>
+    <progress-bar load="35" buffer="55" animated></progress-bar>
+    <progress-bar load="35" buffer="49" animated motif="magenta"></progress-bar>
+    <progress-bar load="35" buffer="59" animated motif="purple"></progress-bar>
+    <progress-bar load="35" buffer="69" animated motif="grey"></progress-bar>
+
+    <button onclick="javascript: testBar0();">test 0</button>
+    <button onclick="javascript: testBar1();">test 1</button>
+    <button onclick="javascript: testBar2();">test 2</button>
+    <button onclick="javascript: testBar3();">test 3</button>
+    
+    <div class="clear"></div>
+
+    <rgb-color id="red" onchange="updateColor(event)" output="none" input="0"></rgb-color>
+    <rgb-color id="green" onchange="updateColor(event)" output="none" input="0"></rgb-color>
+    <rgb-color id="blue" onchange="updateColor(event)" output="none" input="0"></rgb-color>
+    <rgb-color id="output" output="block" input="0-0-0"></rgb-color>
+</body>
+
+</html>

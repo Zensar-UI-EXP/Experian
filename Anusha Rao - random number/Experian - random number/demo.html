@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>software-ui-saas-eds - light header</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="demo.js"></script>
+    <script src="dist/index-all.js"></script>
+</head>
+
+<body>
+    <progress-bar load="35" buffer="55" animated></progress-bar>
+    <progress-bar load="35" buffer="49" animated motif="magenta"></progress-bar>
+    <progress-bar load="35" buffer="59" animated motif="purple"></progress-bar>
+    <progress-bar load="35" buffer="69" animated motif="grey"></progress-bar>
+
+    <button onclick="javascript: testBar0();">test 0123</button>
+    <button onclick="javascript: testBar1();">test 1</button>
+    <button onclick="javascript: testBar2();">test 2</button>
+    <button onclick="javascript: testBar3();">test 3</button>
+
+    <random-number random="0" id="id0"></random-number>
+    <random-number random="0" id="id1"></random-number>
+    <random-number random="0" id="id2"></random-number>
+    <random-number random="0" id="id3"></random-number>
+    <button class="generate__button" onclick="javascript: generateRandom();">Generate</button>
+
+    <div class="form-test">
+        <dynamic-form isAdmin="false" />
+        <dynamic-form isAdmin="true" />
+        <script>
+            const fields = JSON.stringify({
+                groups: [
+                    [1, 2],
+                    [3, 4, 5],
+                    6
+                ],
+                items: [
+                    {id: 1, fieldName: 'first name', type: 'textfield', size: 100},
+                    {id: 4, fieldName: 'city', type: 'textfield', size: 150},
+                    {id: 6, fieldName: 'comment', type: 'textarea', size: 150, height: 150},
+                    {id: 5, fieldName: 'postcode', type: 'textfield', size: 150},
+                    {id: 3, fieldName: 'street', type: 'textfield', size: 150},
+                    {id: 2, fieldName: 'surname', type: 'textfield', size: 100},
+                    {id: 2, fieldName: 'surname', type: 'textfield', size: 100},
+                    {id: 7, fieldName: 'admin name', type: 'textfield', size: 100},
+                ]
+            });
+            document.querySelector('dynamic-form[isAdmin="false"]').setAttribute('fields', fields);
+            document.querySelector('dynamic-form[isAdmin="true"]').setAttribute('fields', fields);
+        </script>
+    </div>
+</body>
+
+</html>

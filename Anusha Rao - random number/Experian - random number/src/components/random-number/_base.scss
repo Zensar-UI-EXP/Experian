@@ -1,0 +1,17 @@
+random-number {
+    width: 30px;
+    height: 0.5em;
+    position: relative;
+    display: block;
+
+    .random-num {
+        width: 100px;
+        position: absolute;
+        height: 30px;
+        padding: 3px;
+        text-align: center;
+        border: 2px solid $sapphire;
+        font-size: 20px;
+        background-color: $gray;
+    }
+}
